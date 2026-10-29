@@ -114,6 +114,30 @@
     menuButton?.setAttribute('aria-expanded', 'false');
   }));
 
+  const contactForm = document.querySelector('.contact-form');
+  const formStatus = document.querySelector('.form-status');
+  contactForm?.addEventListener('submit', (event) => {
+    event.preventDefault();
+    if (!(contactForm instanceof HTMLFormElement)) return;
+
+    const formData = new FormData(contactForm);
+    const name = String(formData.get('name') || '').trim();
+    const email = String(formData.get('email') || '').trim();
+    const project = String(formData.get('project') || '').trim();
+    const timeline = String(formData.get('timeline') || '').trim();
+    const message = String(formData.get('message') || '').trim();
+    const subject = encodeURIComponent(`Project inquiry from ${name}`);
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\nProject: ${project}\nTimeline: ${timeline}\n\n${message}`,
+    );
+
+    if (formStatus) {
+      formStatus.textContent = 'Opening your email client…';
+      formStatus.classList.add('is-visible');
+    }
+    window.location.href = `mailto:eduard.osmani@outlook.com?subject=${subject}&body=${body}`;
+  });
+
   const clock = document.querySelector('#clock');
   const updateClock = () => {
     const now = new Date();

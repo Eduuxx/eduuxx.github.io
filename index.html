@@ -127,7 +127,60 @@
     <section class="contact section-pad" id="contact" aria-labelledby="contact-title">
       <div class="section-label"><span>04 — CONTACT</span><span>OPEN CHANNEL</span></div>
       <div class="contact__heading"><p>HAVE AN IDEA?</p><h2 id="contact-title">LET'S BUILD<br>SOMETHING<br><em>INSANE.</em></h2></div>
-      <a class="contact__link magnetic" href="mailto:eduard.osmani@outlook.com"><span>START A PROJECT</span><b>↗</b></a>
+      <a class="contact__link magnetic" href="#contact-form"><span>START A PROJECT</span><b>↘</b></a>
+      <div class="contact__workspace">
+        <div class="contact__prompt">
+          <span class="rule"></span>
+          <p>Tell me what you are building, where it is going and what would make it matter. I usually reply within 48 hours.</p>
+          <div class="contact__channels">
+            <span>DIRECT CHANNEL</span>
+            <a href="mailto:eduard.osmani@outlook.com">EDUARD.OSMANI@OUTLOOK.COM ↗</a>
+          </div>
+        </div>
+        <form class="contact-form" id="contact-form">
+          <div class="form-row">
+            <label>
+              <span>01 / YOUR NAME</span>
+              <input type="text" name="name" autocomplete="name" placeholder="Your name" required>
+            </label>
+            <label>
+              <span>02 / EMAIL ADDRESS</span>
+              <input type="email" name="email" autocomplete="email" placeholder="you@company.com" required>
+            </label>
+          </div>
+          <div class="form-row">
+            <label>
+              <span>03 / PROJECT TYPE</span>
+              <select name="project" required>
+                <option value="" disabled selected>Select a direction</option>
+                <option>Creative development</option>
+                <option>Interaction design</option>
+                <option>Frontend engineering</option>
+                <option>Digital experience</option>
+                <option>Something else</option>
+              </select>
+            </label>
+            <label>
+              <span>04 / TIMELINE</span>
+              <select name="timeline" required>
+                <option value="" disabled selected>Choose a timeline</option>
+                <option>ASAP / exploratory</option>
+                <option>1—2 months</option>
+                <option>3—6 months</option>
+                <option>Just an idea for now</option>
+              </select>
+            </label>
+          </div>
+          <label>
+            <span>05 / THE SHORT VERSION</span>
+            <textarea name="message" rows="4" placeholder="What are we making?" required></textarea>
+          </label>
+          <div class="form-submit">
+            <button class="submit-button magnetic" type="submit"><span>SEND INQUIRY</span><b>↗</b></button>
+            <p class="form-status" role="status" aria-live="polite"></p>
+          </div>
+        </form>
+      </div>
       <div class="contact__footer">
         <span>NO BRIEFS TOO EARLY.<br>NO IDEAS TOO STRANGE.</span>
         <div class="socials"><a href="mailto:eduard.osmani@outlook.com">EMAIL</a><a href="https://github.com/Eduuxx" target="_blank" rel="noreferrer">GITHUB</a><a href="https://www.linkedin.com/" target="_blank" rel="noreferrer">LINKEDIN</a><a href="https://www.instagram.com/" target="_blank" rel="noreferrer">INSTAGRAM</a></div>
